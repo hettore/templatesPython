@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRODUTO</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <h1> {{ nome }}  </h1>
+            <img width='256' src='{{ imagem }}'>
+            <p>O novo {{ nome }}  está saindo por apenas R${{ preco }}.</p>
+            <p>DESCRIÇÃO: {{ descricao }}</p>
+        </div>
+    </body>
+</html>
