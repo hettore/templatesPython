@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUTOS</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  </head>
+  <body>
+    <div class="container mt-5 custom-container">
+        {% for id, produto in produtos.items() %}
+        <div class="row mb-4">
+        <div class="col-md-4">
+          <img src="{{ produto['imagem'] }}" alt="{{ produto['descricao'] }}" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+          <h1>{{ produto['nome'] }}</h1>
+          <p>{{ produto['preco'] }}</p>
+          <p>{{ produto['descricao'] }}</p>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
+</html>
